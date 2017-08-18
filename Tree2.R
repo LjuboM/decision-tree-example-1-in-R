@@ -4,7 +4,6 @@ require("rpart.plot")
 data<-read.table("Skin_NonSkin.txt",sep="\t", header=FALSE)
 rowsWithIndexNumberEndingWithZero <- which((1:nrow(data))%%10 == 0)
 
-#Podjela podataka na trening i test dio
 training_data<-data[-rowsWithIndexNumberEndingWithZero,]
 test_data<-data[rowsWithIndexNumberEndingWithZero,]
 y_training<-training_data[,4]
